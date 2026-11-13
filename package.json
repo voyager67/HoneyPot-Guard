@@ -12,6 +12,9 @@
   "files": [
     "bin/",
     "lib/",
+    "docs/",
+    "assets/",
+    ".honeypot-guard.json.example",
     "README.md",
     "LICENSE",
     "SECURITY.md"

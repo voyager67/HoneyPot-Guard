@@ -120,7 +120,7 @@ The default `--fail-on high` blocks critical and high findings. Medium findings 
 
 ## Policy configuration
 
-Copy `.honeypot-guard.json.example` to `.honeypot-guard.json` in the root of the repository:
+Copy `.honeypot-guard.json.example` to `.honeypot-guard.json` in the root of the repository. When installed as a dependency, the template is available at `node_modules/honeypot-guard/.honeypot-guard.json.example`:
 
 ```json
 {
