@@ -1,0 +1,13 @@
+node_modules/
+coverage/
+.nyc_output/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.dist
+.honeypot-guard.local.json

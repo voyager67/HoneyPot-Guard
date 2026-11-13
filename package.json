@@ -1,0 +1,45 @@
+{
+  "name": "honeypot-guard",
+  "version": "1.0.0",
+  "description": "A local-first pre-commit red-flag scanner for leaked secrets, suspicious egress, and risky code patterns.",
+  "license": "MIT",
+  "author": "Harsh Singh",
+  "type": "commonjs",
+  "main": "lib/scanner.js",
+  "bin": {
+    "honeypot-guard": "bin/honeypot-guard.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node bin/honeypot-guard.js demo --no-color",
+    "check": "node --check bin/honeypot-guard.js && node --check lib/cli.js && node --check lib/config.js && node --check lib/git.js && node --check lib/report.js && node --check lib/scanner.js && npm test"
+  },
+  "keywords": [
+    "pre-commit",
+    "security",
+    "secret-scanning",
+    "git-hooks",
+    "cli",
+    "devsecops",
+    "sarif",
+    "supply-chain-security"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voyager67/HoneyPot-Guard.git"
+  },
+  "homepage": "https://github.com/voyager67/HoneyPot-Guard#readme",
+  "bugs": {
+    "url": "https://github.com/voyager67/HoneyPot-Guard/issues"
+  }
+}

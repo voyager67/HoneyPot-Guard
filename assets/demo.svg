@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Honeypot Guard synthetic terminal audit</title>
+  <desc id="desc">A dark terminal report with synthetic credential and endpoint findings and a Congressional Subpoena exposure rating.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#090d14"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#facc15"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity=".34"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="180" fill="#f59e0b" opacity=".045"/>
+  <circle cx="70" cy="700" r="190" fill="#22c55e" opacity=".035"/>
+  <rect x="34" y="28" width="1132" height="704" rx="20" fill="#0b1018" stroke="#273244" filter="url(#shadow)"/>
+  <path d="M34 88h1132" stroke="#273244"/>
+  <circle cx="66" cy="58" r="8" fill="#fb7185"/>
+  <circle cx="94" cy="58" r="8" fill="#fbbf24"/>
+  <circle cx="122" cy="58" r="8" fill="#4ade80"/>
+  <text x="600" y="65" text-anchor="middle" fill="#93a4b8" font-family="Inter, ui-sans-serif, system-ui" font-size="18">honeypot-guard · synthetic audit</text>
+  <text x="72" y="137" fill="#f8fafc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="25" font-weight="700">HONEYPOT-GUARD™  PRE-COMMIT RED-FLAG AUDIT</text>
+  <text x="72" y="173" fill="#7c8da3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">mode: synthetic demo · local-only · no network requests</text>
+  <path d="M72 201h1056" stroke="#334155" stroke-dasharray="5 7"/>
+  <text x="72" y="245" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700">Findings requiring review: 8</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">
+    <text x="82" y="295" fill="#fb7185" font-weight="700">CRITICAL</text>
+    <text x="190" y="295" fill="#f8fafc" font-weight="700">AWS-001</text>
+    <text x="300" y="295" fill="#e2e8f0">AWS access key ID</text>
+    <text x="190" y="322" fill="#91a0b4" font-size="15">src/config.js:12  Credential-shaped value detected; value withheld.</text>
+    <text x="82" y="369" fill="#fb7185" font-weight="700">CRITICAL</text>
+    <text x="190" y="369" fill="#f8fafc" font-weight="700">GH-001</text>
+    <text x="300" y="369" fill="#e2e8f0">GitHub token</text>
+    <text x="190" y="396" fill="#91a0b4" font-size="15">src/config.js:14  Credential-shaped value detected; value withheld.</text>
+    <text x="82" y="443" fill="#fbbf24" font-weight="700">HIGH</text>
+    <text x="190" y="443" fill="#f8fafc" font-weight="700">NET-001</text>
+    <text x="300" y="443" fill="#e2e8f0">Suspicious outbound destination</text>
+    <text x="190" y="470" fill="#91a0b4" font-size="15">src/network.js:8  Host: webhook.site · path and query withheld.</text>
+    <text x="82" y="517" fill="#fbbf24" font-weight="700">HIGH</text>
+    <text x="190" y="517" fill="#f8fafc" font-weight="700">FLOW-001</text>
+    <text x="300" y="517" fill="#e2e8f0">Possible credential-to-network flow</text>
+    <text x="190" y="544" fill="#91a0b4" font-size="15">src/network.js:8  Same-file identifier heuristic; not full data-flow analysis.</text>
+  </g>
+  <path d="M72 577h1056" stroke="#334155" stroke-dasharray="5 7"/>
+  <text x="72" y="620" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">EXPOSURE</text>
+  <rect x="190" y="599" width="360" height="23" rx="7" fill="#1f2937"/>
+  <rect x="190" y="599" width="360" height="23" rx="7" fill="url(#accent)"/>
+  <text x="575" y="619" fill="#facc15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">score 41</text>
+  <text x="72" y="666" fill="#fb7185" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="800">VERDICT  CONGRESSIONAL SUBPOENA</text>
+  <text x="72" y="699" fill="#64748b" font-family="Inter, ui-sans-serif, system-ui" font-size="14">Synthetic demonstration only · No real credentials · No telemetry · No verdict on intent</text>
+</svg>

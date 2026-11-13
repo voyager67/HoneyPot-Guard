@@ -1,0 +1,11 @@
+{
+  "allowedHosts": [
+    "api.github.com",
+    "*.internal.example"
+  ],
+  "ignoredPaths": [
+    "docs/fixtures/**",
+    "generated/**"
+  ],
+  "disabledRules": []
+}

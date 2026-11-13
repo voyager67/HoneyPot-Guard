@@ -1,0 +1,7 @@
+- id: honeypot-guard
+  name: honeypot-guard
+  description: Scan staged additions for secrets and suspicious outbound behavior.
+  entry: honeypot-guard scan --staged
+  language: node
+  pass_filenames: false
+  always_run: true

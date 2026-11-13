@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use Honeypot Guard in research or engineering work, please cite the repository."
+title: "Honeypot Guard: a local-first pre-commit red-flag scanner"
+authors:
+  - family-names: Singh
+    given-names: Harsh
+version: 1.0.0
+date-released: 2026-11-13
+license: MIT
+repository-code: "https://github.com/voyager67/HoneyPot-Guard"

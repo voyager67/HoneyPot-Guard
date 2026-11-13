@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible scanner issue without sharing real secrets.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Never paste real credentials, private repository content, or live callback URLs here. Use synthetic examples."
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect the scanner to do?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the rule ID and a redacted output excerpt.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Node.js and Honeypot Guard versions
+      placeholder: "Node 22.x / Honeypot Guard 1.0.0"
+    validations:
+      required: true

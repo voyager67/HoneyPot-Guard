@@ -1,0 +1,6 @@
+test/
+docs/
+assets/
+.github/
+.honeypot-guard.json
+*.log
