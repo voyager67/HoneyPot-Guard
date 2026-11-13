@@ -15,7 +15,7 @@
 
 ## The 10-second audit
 
-No API key. No account. No cloud upload. No repository required for the synthetic demo.
+No API key. No account. No cloud upload. No local repository required for the synthetic demo. An internet connection is needed to fetch the CLI from GitHub.
 
 After this repository is public, run:
 
