@@ -9,7 +9,6 @@
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" /></a>
   </p>
   <p><em>A local-first pre-commit red-flag scanner for leaked secrets, suspicious egress, and risky code patterns.</em></p>
-  <p><sub>Repository badges are static while this repository is private; the live workflow and star counters are intentionally omitted until public launch.</sub></p>
 </div>
 
 ---
@@ -89,19 +88,26 @@ npx honeypot-guard demo
 npx honeypot-guard scan --staged
 
 # Inspect real staged changes but do not block
-npx honeypot-guard scan --staged --dry-run
+npx honeypot-guard scan --staged \
+  --dry-run
 
 # Machine-readable output
-npx honeypot-guard scan --staged --format json
-npx honeypot-guard scan --staged --format sarif
+npx honeypot-guard scan --staged \
+  --format json
+npx honeypot-guard scan --staged \
+  --format sarif
 
 # Choose the minimum severity that blocks a commit
-npx honeypot-guard scan --staged --fail-on critical
-npx honeypot-guard scan --staged --fail-on medium
-npx honeypot-guard scan --staged --fail-on never
+npx honeypot-guard scan --staged \
+  --fail-on critical
+npx honeypot-guard scan --staged \
+  --fail-on medium
+npx honeypot-guard scan --staged \
+  --fail-on never
 
 # Use a different policy file
-npx honeypot-guard scan --staged --config config/security-policy.json
+npx honeypot-guard scan --staged \
+  --config config/security-policy.json
 ```
 
 | Exit code | Meaning |
@@ -182,7 +188,8 @@ The research question is:
 Requirements: Node.js 18.12+ and Git. Runtime dependencies: **zero**.
 
 ```bash
-git clone https://github.com/voyager67/HoneyPot-Guard.git
+git clone \
+  https://github.com/voyager67/HoneyPot-Guard.git
 cd HoneyPot-Guard
 npm test
 npm run demo
