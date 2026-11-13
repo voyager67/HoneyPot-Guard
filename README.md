@@ -3,13 +3,13 @@
   <h1>🍯 honeypot-guard</h1>
   <p><strong>Even $3 trillion in AI compute couldn't detect a red flag.<br/>Your pre-commit hook can.</strong></p>
   <p>
-    <a href="https://github.com/voyager67/HoneyPot-Guard/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/voyager67/HoneyPot-Guard/ci.yml?branch=main&label=tests" alt="CI tests" /></a>
-    <a href="https://github.com/voyager67/HoneyPot-Guard/stargazers"><img src="https://img.shields.io/github/stars/voyager67/HoneyPot-Guard?style=flat&logo=github" alt="GitHub stars" /></a>
+    <img src="https://img.shields.io/badge/CI-GitHub_Actions-2088FF?logo=githubactions&logoColor=white" alt="GitHub Actions CI workflow" />
     <img src="https://img.shields.io/badge/Node.js-%3E%3D18.12-339933?logo=node.js&logoColor=white" alt="Node.js 18.12 or newer" />
     <img src="https://img.shields.io/badge/runtime%20dependencies-0-success" alt="Zero runtime dependencies" />
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" /></a>
   </p>
   <p><em>A local-first pre-commit red-flag scanner for leaked secrets, suspicious egress, and risky code patterns.</em></p>
+  <p><sub>Repository badges are static while this repository is private; the live workflow and star counters are intentionally omitted until public launch.</sub></p>
 </div>
 
 ---
@@ -18,19 +18,21 @@
 
 No API key. No account. No cloud upload. No repository required for the synthetic demo.
 
-```bash
-npx --yes github:voyager67/HoneyPot-Guard --dry-run --no-color
-```
-
-The command downloads the CLI from this GitHub repository and runs a deterministic demonstration built entirely from synthetic fixtures. It does **not** inspect your project, make network requests from the scanner, or block a commit.
-
-To run the same demo from a clone:
+After this repository is public, run:
 
 ```bash
-node bin/honeypot-guard.js demo --no-color
+npx github:voyager67/HoneyPot-Guard demo
 ```
 
-> The GitHub `npx` command is usable once this repository is public. It is not necessary to publish a separate npm release.
+This downloads the package from this GitHub repository and runs its demo command. Like **any** `npx` command that fetches remote code, it executes that code with your current user's permissions. npm may ask you to confirm installation; read the prompt and review the source before accepting. Do not run it as Administrator/root. The demo uses synthetic fixtures only: it does not inspect your project, change files, block a commit, or make network requests from the scanner itself. npm must still contact GitHub to fetch the package.
+
+For a fully inspectable local run, clone the repository and execute:
+
+```bash
+npm run demo
+```
+
+No separate npm registry release is required for the GitHub-source command.
 
 ## What it checks
 
@@ -54,13 +56,15 @@ Findings include a location, explanation, and remediation. Credential values are
 Add the GitHub repository as a development dependency:
 
 ```bash
-npm install --save-dev github:voyager67/HoneyPot-Guard
+npm install --save-dev \
+  github:voyager67/HoneyPot-Guard
 ```
 
 Run a staged scan without blocking the commit:
 
 ```bash
-npx honeypot-guard scan --staged --dry-run
+npx honeypot-guard scan --staged \
+  --dry-run
 ```
 
 Install the managed Git pre-commit hook:
