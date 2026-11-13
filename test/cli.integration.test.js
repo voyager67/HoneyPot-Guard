@@ -55,6 +55,7 @@ test('demo exits successfully and supports JSON output', () => {
   assert.equal(result.status, 0, result.stderr);
   const report = JSON.parse(result.stdout);
   assert.equal(report.mode, 'synthetic demo');
+  assert.equal(typeof report.elapsedMs, 'number');
   assert.ok(report.summary.findings >= 7);
 });
 
@@ -98,4 +99,13 @@ test('unknown options fail with a usage error instead of being silently ignored'
   const result = run(['scan', '--surprise'], projectRoot);
   assert.equal(result.status, 2);
   assert.match(result.stderr, /Unknown option/);
+});
+
+
+test('rejects inherited object property names as fail-on levels', () => {
+  for (const value of ['constructor', 'toString', '__proto__']) {
+    const result = run(['scan', '--fail-on', value], projectRoot);
+    assert.equal(result.status, 2);
+    assert.match(result.stderr, /Invalid --fail-on value/);
+  }
 });
